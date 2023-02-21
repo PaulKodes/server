@@ -196,17 +196,17 @@ app.post('/api/v2/upload', function ( request, response) {
 //     res.send({success: true})
 //     });
 
-app.get('/auth/github/callback',
-    passport.authenticate('github', { failureRedirect: '/login' }),
-    function(req, res) {
-        res.redirect('/');
-    });
+// app.get('/auth/github/callback',
+//     passport.authenticate('github', { failureRedirect: '/login' }),
+//     function(req, res) {
+//         res.redirect('/');
+//     });
 
-app.get('/',
-    passport.authenticate('github', { failureRedirect: '/login' }),
-    function(req, res) {
-        res.redirect('/');
-    });
+// app.get('/',
+//     passport.authenticate('github', { failureRedirect: '/login' }),
+//     function(req, res) {
+//         res.redirect('/');
+//     });
 const runApp = async ()=>{
     try {
         // await sequelize.authenticate();
